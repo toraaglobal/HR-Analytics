@@ -1798,7 +1798,7 @@ cor
 
 
 
-![png](output_26_1.png)
+![png](viz/output_26_1.png)
 
 
 #### Drop  columns that are not useful
@@ -2454,7 +2454,7 @@ corr
 
 
 
-![png](output_31_1.png)
+![png](viz/output_31_1.png)
 
 
 #### Change Attrition value to 0 : NO, 1 :YES
@@ -3280,7 +3280,7 @@ corr
 
 
 
-![png](output_35_1.png)
+![png](viz/output_35_1.png)
 
 
 #### Distribution of Age, MonthlyIncome, JobSatisfaction
@@ -3325,7 +3325,7 @@ axes[2].set_ylabel('Employee Count')
 
 
 
-![png](output_37_2.png)
+![png](viz/output_37_2.png)
 
 
 #### Distribution of DailyRate, Education and DistanceFromeHome
@@ -3369,7 +3369,7 @@ axes[2].set_ylabel('Employee Count')
 
 
 
-![png](output_39_2.png)
+![png](viz/output_39_2.png)
 
 
 #### Age and Monthly Income
@@ -3387,7 +3387,7 @@ sns.lmplot(x='Age', y='MonthlyIncome', data=hrdata,fit_reg=False,hue='Attrition'
 
 
 
-![png](output_41_1.png)
+![png](viz/output_41_1.png)
 
 
 * Employee with low monthly income and withing the Age of 18 to 35 are more likely to leave the company
@@ -3408,7 +3408,7 @@ sns.lmplot(x='MonthlyIncome', y='JobSatisfaction', data=hrdata, fit_reg=False, h
 
 
 
-![png](output_44_1.png)
+![png](viz/output_44_1.png)
 
 
 * Employee with low monthly income inrespective of job Satisfaction are likely to leave the company
@@ -3430,7 +3430,7 @@ sns.lmplot(x='DistanceFromHome', y='JobSatisfaction', data=hrdata, fit_reg=False
 
 
 
-![png](output_47_1.png)
+![png](viz/output_47_1.png)
 
 
 #### Age and Distance from home
@@ -3448,7 +3448,7 @@ sns.lmplot(x='Age', y='JobSatisfaction', data=hrdata, fit_reg=False, hue='Attrit
 
 
 
-![png](output_49_1.png)
+![png](viz/output_49_1.png)
 
 
 #### Performance rating and Job satisfaction
@@ -3466,7 +3466,7 @@ sns.lmplot(x='PerformanceRating', y='JobSatisfaction', data=hrdata, fit_reg=Fals
 
 
 
-![png](output_51_1.png)
+![png](viz/output_51_1.png)
 
 
 #### Employee JobSatisfaction
@@ -3492,7 +3492,7 @@ plt.title('Employee Job Satisfaction Distribution - Attrition V.S. No Attrition'
 
 
 
-![png](output_53_2.png)
+![png](viz/output_53_2.png)
 
 
 * Employee with lower job satisfation are likely to leave compared to employee with higher job satisfation
@@ -3520,7 +3520,7 @@ plt.title('Employee Age Distribution - Attrition V.S. No Attrition')
 
 
 
-![png](output_56_2.png)
+![png](viz/output_56_2.png)
 
 
 #### Monthly Income
@@ -3546,7 +3546,7 @@ plt.title('Employee Monthly Income Distribution - Attrition V.S. No Attrition')
 
 
 
-![png](output_58_2.png)
+![png](viz/output_58_2.png)
 
 
 * Employee with low Monthly Income are likely to leave the company
@@ -3571,7 +3571,7 @@ ax.set(ylabel="Percent")
 
 
 
-![png](output_61_2.png)
+![png](viz/output_61_2.png)
 
 
 #### Department Distribution
@@ -3665,7 +3665,7 @@ sns.despine(left=True, bottom=True)
 ```
 
 
-![png](output_64_0.png)
+![png](viz/output_64_0.png)
 
 
 ### KMean Clustering of the Employee Attrition
@@ -3691,7 +3691,7 @@ plt.show()
 ```
 
 
-![png](output_66_0.png)
+![png](viz/output_66_0.png)
 
 
 ### Data Pre-Processing
@@ -3965,7 +3965,7 @@ plt.ylabel('Count', fontsize=16)
 
 
 
-![png](output_73_1.png)
+![png](viz/output_73_1.png)
 
 
 There are many ways of dealing with imbalanced data. We will focus in the following approaches:
@@ -4388,7 +4388,7 @@ plt.show()
 ```
 
 
-![png](output_96_0.png)
+![png](viz/output_96_0.png)
 
 
 ### Feature Importance
@@ -4676,7 +4676,7 @@ sns.barplot(x="importance", y='index', data=feature_importances,
 
 
 
-![png](output_99_1.png)
+![png](viz/output_99_1.png)
 
 
 #### Apply Random Noise to feature Importance
@@ -4988,7 +4988,7 @@ sns.barplot(x="importance", y='index', data=feature_importances_random,
 
 
 
-![png](output_103_1.png)
+![png](viz/output_103_1.png)
 
 
 ### Random Forest Using Feature Importance
@@ -5197,7 +5197,7 @@ corr
 
 
 
-![png](output_110_1.png)
+![png](viz/output_110_1.png)
 
 
 #### Data Pre-processing
