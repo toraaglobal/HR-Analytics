@@ -2,6 +2,49 @@
 
 {% block content %}
 
+
+</br>
+
+<h3>Predict Employee Attrition</h3>
+
+<form method=post action="/attrition">
+  <b>Over Time: </b> Yes/No
+  <input type="text" name="OverTime">
+
+  <br><br>
+  <b>Age: </b> 
+  <input type="number" name="Age">
+  <br><br>
+  <b>Hourly Rate: </b>
+  <input type="number" name="HourlyRate">
+  <br><br>
+  <b>Daily Rate: </b>
+  <input type="number" name="DailyRate">
+  <br><br>
+  <b>Monthly Income : </b>
+  <input type="number" name="MonthlyIncome">
+  <br><br>
+  <b>Total Working Years: </b>
+  <input type="number" name="TotalWorkingYears">
+  <br><br>
+  <b>Years at Company:</b>
+  <input type="number" name="YearsAtCompany">
+  <br><br>
+  <b>Number of Company Worked: </b>
+  <input type="number" name="NumCompaniesWorked">
+  <br><br>
+  <b>Distance from Home: </b>
+  <input type="number" name="DistanceFromHome">
+  <br><br>
+  <input type=submit value='Get Prediction' >
+</form>
+
+
+
+   {{ retJson }}
+
+</br>
+
   
 
 {% endblock %}

@@ -4,20 +4,19 @@
 
 </br>
 </br>
-  
-
-
-  <h1> Upload Employee Records in CSV</h1>
+  <b>Upload a CSV file of Employee with the following columns:</b> <br><br>
+  ['OverTime','Age','HourlyRate','DailyRate','MonthlyIncome','TotalWorkingYears','YearsAtCompany','NumCompaniesWorked','DistanceFromHome']
+  <br><br>
   <form method=post enctype=multipart/form-data>
-    <p><input type=file name=file>
+    <p><input type=file name=file><br>
        <input type=submit value=Upload>
   </form>
 
 
    {{ retJson }}
 
-  '''
-
   
+
+
 
 {% endblock %}

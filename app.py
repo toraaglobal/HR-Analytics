@@ -69,7 +69,7 @@ def prediction_page():
             count = 0
             for prob in prediction:
                 count+=1
-                retJson.append("The probability of Employee Attrition with index {} : {} %                      ".format(count,prob[0] * 100))
+                retJson.append("The probability of Employee Attrition with index {} : {} % ".format(count,prob[0] * 100))
 
 
 
@@ -78,6 +78,47 @@ def prediction_page():
             return render_template('home.html',error=None, retJson= retJson )
 	# render a static template
     return render_template('home.html')
+
+@app.route('/attrition', methods=['GET','POST'])
+def single_prediction_page():
+    if request.method == 'POST':
+        Age = request.form['Age']
+        HourlyRate = request.form['HourlyRate']
+        OverTime = request.form['OverTime']
+        DailyRate = request.form['DailyRate']
+        MonthlyIncome = request.form['MonthlyIncome']
+        TotalWorkingYears = request.form['TotalWorkingYears']
+        YearsAtCompany = request.form['YearsAtCompany']
+        NumCompaniesWorked = request.form['NumCompaniesWorked']
+        DistanceFromHome = request.form['DistanceFromHome']
+
+        if OverTime == 'Yes':
+            OverTime_Yes = 1
+        else:
+            OverTime_Yes = 0
+        #create a pandas dataframe
+        df = pd.DataFrame([{'Age': Age, 'HourlyRate': HourlyRate,'DailyRate':DailyRate, 'MonthlyIncome': MonthlyIncome, 
+                  'TotalWorkingYears':TotalWorkingYears, 'YearsAtCompany': YearsAtCompany, 'NumCompaniesWorked':NumCompaniesWorked,
+                   'DistanceFromHome':DistanceFromHome, 'OverTime_Yes': OverTime_Yes}])
+        loaded_model = pickle.load(open('./random_forest_hr_model.sav', 'rb'))
+        #print(df.head())
+        
+        #temp =  [ Age, HourlyRate, DailyRate, MonthlyIncome,TotalWorkingYears, YearsAtCompany, NumCompaniesWorked,DistanceFromHome, OverTime_Yes]
+        #temp = np.reshape(1,-1)
+
+        prediction = loaded_model.predict_proba(df)
+    
+        retJson = []
+        for prob in prediction:
+            retJson.append("The probability of Employee Attrition is : {} % ".format(prob[0] * 100))
+
+        return render_template('prob.html',error=None, retJson= retJson )
+	# render a static template
+    return render_template('attrition.html')
+
+@app.route('/github')
+def github_page():
+    return redirect('https://github.com/toraaglobal/HR-Analytics')
 
 
 @app.route('/viz')
