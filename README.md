@@ -1,4 +1,3 @@
-***
 [App URL](https://hr-analytics-rf.herokuapp.com/)
 ***
 ## The Role of Analytics in Human Resources
