@@ -92,6 +92,9 @@ def single_prediction_page():
         NumCompaniesWorked = request.form['NumCompaniesWorked']
         DistanceFromHome = request.form['DistanceFromHome']
 
+        if len(Age) <= 0 or len(HourlyRate) <= 0 or len(OverTime) <= 0 or len(DailyRate) <= 0 or len(MonthlyIncome)<= 0 or len(TotalWorkingYears) <= 0 or len(YearsAtCompany) <= 0 or len(NumCompaniesWorked) <= 0:
+            return render_template('attrition.html', retJson= 'All filed is required to make prediction' )
+
         if OverTime == 'Yes':
             OverTime_Yes = 1
         else:
