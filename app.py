@@ -113,8 +113,8 @@ def single_prediction_page():
     
         retJson = []
         for prob in prediction:
-            retJson.append("The probability of Employee Attrition is : {} % ".format(prob[0] * 100))
-
+            retJson.append("The probability  is : {} % ".format(prob[0] * 100))
+ 
         return render_template('prob.html',error=None, retJson= retJson )
 	# render a static template
     return render_template('home.html')
@@ -124,13 +124,10 @@ def github_page():
     return redirect('https://github.com/toraaglobal/HR-Analytics')
 
 
-@app.route('/viz')
-def visualization_page():
+#@app.route('/viz')
+#def visualization_page():
 	# render a static template
-    return render_template('viz.html')
-
-
-
+ #   return render_template('viz.html')
 
 
 
