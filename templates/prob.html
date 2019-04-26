@@ -3,13 +3,13 @@
 {% block content %}
 
 <br><br>
-  <b> {{ retJson }} </b> 
+  <h3><font color=green>   {{ retJson }} </font>  </h3> 
 
 <br><br>
   <div class="text_cell_render border-box-sizing rendered_html">
     <p><strong>Reference:</strong> <a href="http://rupeshkhare.com/wp-content/uploads/2013/12/Employee-Attrition-Risk-Assessment-using-Logistic-Regression-Analysis.pdf">http://rupeshkhare.com/wp-content/uploads/2013/12/Employee-Attrition-Risk-Assessment-using-Logistic-Regression-Analysis.pdf</a></p>
     <ol>
-    <li><strong>Safe Zone (Green)</strong> – Employees within this zone are considered safe. </li>
+    <li><font color=white><strong>Safe Zone (Green)</strong> – Employees within this zone are considered safe. </font> </li>
     <li><strong>Low Risk Zone (Yellow)</strong> – Employees within this zone are too be taken into consideration of potential turnover. This is more of a long-term track.</li>
     <li><strong>Medium Risk Zone (Orange)</strong> – Employees within this zone are at risk of turnover. Action should be taken and monitored accordingly. </li>
     <li><strong>High Risk Zone (Red)</strong> – Employees within this zone are considered to have the highest chance of turnover. Action should be taken immediately. </li>
@@ -19,4 +19,5 @@
     </div>
 
 
-{% endblock %}
+
+    {% endblock %}

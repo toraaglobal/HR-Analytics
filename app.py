@@ -35,10 +35,10 @@ app = Flask(__name__)
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-@app.route('/analysis')
+@app.route('/home')
 def analysis_page():
 	# render a static template
-    return render_template('HR-Analytics.html')
+    return render_template('home.html')
 
 @app.route('/')
 def index():
@@ -93,7 +93,7 @@ def single_prediction_page():
         DistanceFromHome = request.form['DistanceFromHome']
 
         if len(Age) <= 0 or len(HourlyRate) <= 0 or len(OverTime) <= 0 or len(DailyRate) <= 0 or len(MonthlyIncome)<= 0 or len(TotalWorkingYears) <= 0 or len(YearsAtCompany) <= 0 or len(NumCompaniesWorked) <= 0:
-            return render_template('attrition.html', retJson= 'All filed is required to make prediction' )
+            return render_template('home.html', retJson= 'All filed is required to make prediction' )
 
         if OverTime == 'Yes':
             OverTime_Yes = 1
@@ -117,7 +117,7 @@ def single_prediction_page():
 
         return render_template('prob.html',error=None, retJson= retJson )
 	# render a static template
-    return render_template('attrition.html')
+    return render_template('home.html')
 
 @app.route('/github')
 def github_page():

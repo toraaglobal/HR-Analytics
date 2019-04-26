@@ -3,17 +3,41 @@
 {% block content %}
 
 </br>
-</br>
-  <b>Upload a CSV file of Employee with the following columns:</b> <br><br>
-  ['OverTime','Age','HourlyRate','DailyRate','MonthlyIncome','TotalWorkingYears','YearsAtCompany','NumCompaniesWorked','DistanceFromHome']
+
+<h3><font color=white>PREDICT EMPLOYEE ATTRITION RATE</font></h3>
+
+<form method=post action="/attrition">
+  <b><font color=white>Over Time: </font> </b> Yes/No
+  <input type="text" name="OverTime">
+  <b><font color=white> Age:</font> </b> 
+  <input type="number" name="Age">
+  <b> <font color=white>Hourly Rate:</font> </b>
+  <input type="number" name="HourlyRate">
+
   <br><br>
-  <form method=post enctype=multipart/form-data>
-    <p><input type=file name=file><br>
-       <input type=submit value=Upload>
-  </form>
+  <b><font color=white>Daily Rate:</font> </b>
+  <input type="number" name="DailyRate">
+  <b><font color =white>Monthly Income :</font> </b>
+  <input type="number" name="MonthlyIncome">
+  <b><font color=white>Total Working Years:</font> </b>
+  <input type="number" name="TotalWorkingYears">
+
+  <br><br>
+  <b><font color=white>Years at Company:</font></b>
+  <input type="number" name="YearsAtCompany">
+  <b><font color=white>Number of Company Worked:</font> </b>
+  <input type="number" name="NumCompaniesWorked">
+  <b><font color=white>Distance from Home:</font> </b>
+  <input type="number" name="DistanceFromHome">
+  <br><br>
+  <input type=submit value='Get Prediction' >
+</form>
 
 
-   {{ retJson }}
+
+  <h6> <font color=red>   {{ retJson }}  </font></h6>
+
+</br>
 
   
 
