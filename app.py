@@ -1,3 +1,11 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jun 30 17:46:19 2020
+
+@author: teeja
+"""
+
+
 from flask import Flask, render_template, request, redirect, url_for,session
 import pandas as pd
 import numpy as np
@@ -10,7 +18,8 @@ from flask import jsonify
 #prep data
 def prep_data(df):
     '''
-    :Assumption: Asuuming the dataframe contains the required columns
+    :Assu
+mption: Asuuming the dataframe contains the required columns
     : required columns : ['OverTime','Age','HourlyRate','DailyRate','MonthlyIncome','TotalWorkingYears','YearsAtCompany','NumCompaniesWorked','DistanceFromHome']
     :input: pandas dataframe
     :output: pre-processed dataframe  with selected columns
@@ -19,7 +28,6 @@ def prep_data(df):
     num_df = df[['Age','HourlyRate','DailyRate','MonthlyIncome','TotalWorkingYears','YearsAtCompany','NumCompaniesWorked','DistanceFromHome']]
     new_df = pd.concat([num_df,cat_df], axis=1)
     return new_df
-
 
 #
 def allowed_file(filename):
